@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Facebook login</title>
+</head>
+<body>
+
+    <header>    
+        <div class="center">
+            <div class="logo">
+                <h2>Testbook</h2>
+            </div><!--logo-->
+
+            <form method="post" class="form-login">
+                <div class="form-element">
+                    <p>Email ou Celular</p>
+                    <input type="email" required>
+                </div><!--form-element-->
+
+                <div class="form-element">
+                    <p>Senha</p>
+                    <input type="password" required>
+                </div><!--form-element-->
+
+                <div class="form-element">
+                    <input type="submit" name="acao" value="Enviar">
+                </div><!--form-element-->
+
+            </form><!--form-login-->
+            <div class="clear"></div><!--clear-->
+
+        </div><!--center-->
+
+    </header>
+
+        <section class="main">
+            <div class="center">
+                <div class="img_pessoas">
+                    <img src="img_pessoas.png"/>
+                </div><!--img_pessoas-->  
+
+                <div class="abrir-conta">
+                    <h2>Abra sua conta</h2>
+                    <h3>E sempre será grátis.</h3>
+                    <form class="criar-conta">
+                        <div class="w50">
+                            <input type="text" placeholder="Nome">
+                        </div><!--w50-->
+                        
+                        <div class="w50">
+                            <input type="text" placeholder="Sobrenome">
+                        </div><!--w50-->
+                    
+                        <div class="w100">
+                            <input type="email" placeholder="Email ou Celular">
+                        </div><!--w100-->
+                        
+                        <div class="w100">
+                            <input type="password" placeholder="Nova Senha">
+                        </div><!--w100-->
+
+                        <div class="w100">  
+                            <h3>Data de Nascimento</h3>
+            
+                            <select name="nascimento-dia" id="dia" class="nascimento"> 
+                                    <option value="" disabled selected>Dia</option>
+                                </select><!--nascimento-dia-->
+
+
+                            <select  name="nascimento-mes" id="mes" class="nascimento"> 
+                                <option value="" disabled selected>Mês</option>
+                            </select><!--nascimento-mes-->
+
+
+                            <select  name="nasimento-ano" id="ano" class="nascimento"> 
+                                <option value="" disabled selected>Ano</option>
+                            </select><!--nascimento-ano-->
+
+                            <!--PARTE DO JAVA SCRIPT-->
+                        <script>   
+                        //Selecione o dia  
+                             var selectDia = document.getElementById("dia");
+                             for (var dia = 1; dia <= 31; dia++) {
+                                 var option = document.createElement("option");
+                                 option.value = dia;
+                                 option.text = dia;
+                                 selectDia.appendChild(option);
+                                }
+                                
+                        //Selecione o mes
+                                var selectMes = document.getElementById("mes");
+                                var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+                                for(var mes = 0; mes< meses.length; mes++){
+                                    var option = document.createElement("option");
+                                    option.value = mes + 1;
+                                    option.text = meses[mes];
+                                    selectMes.appendChild(option);
+                                }
+
+                        //Selecione o ano
+
+                        var selectAno = document.getElementById("ano");
+                        var currentAno = new Date().getFullYear();
+
+                        for(var ano = 1950; ano<=currentAno; ano++){
+                            var option = document.createElement("option");
+                            option.value = ano;
+                            option.text = ano;
+                            selectAno.appendChild(option);
+                        }
+
+
+                         </script><!--Fim do java script-->
+                            
+                            <div class="clear"></div>
+                            
+                        </div><!--w100-->
+                        
+                        <div class="w100">
+                            <input type="submit" name="acao" value="Cadastrar">
+                        </div><!--w100-->
+                        
+            
+                    </form><!--criar-conta-->
+                </div><!--abrir-conta-->
+                <div class="clear"></div>
+            </div><!--center-->
+
+        </section><!--main-->
+
+        <section class="linguas">
+            <div class="center">
+                <a class="select-lingua" href="#">Portugues(BR)</a>
+                <a class="select-lingua" href="#">Ingles(En)</a>
+                <a class="select-lingua" href="#">Espanhol(Es)</a>
+                <a class="select-lingua" href="#">Japones(Jp)</a>
+                <a class="select-lingua" href="#">Mandarim(Ch)</a>
+                <a class="select-lingua" href="#">Alemao(Al)</a>
+
+            </div><!--center-->
+
+            <div style="border: 0; padding-top: 10px;" class="center">
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                <a href="#">Lorem ipsum</a>
+                
+             </div><!--center-->
+          
+        </section><!--section-->
+
+    
+</body>
+</html>
